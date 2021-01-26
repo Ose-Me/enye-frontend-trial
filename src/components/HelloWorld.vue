@@ -48,9 +48,7 @@
             <div class="select is-fullwidth">
               <!-- populate creditcardtype dropdown menu -->
               <select v-model="selectedgender">
-                <option value="">
-                  Any
-                </option>
+                <option value="">Any</option>
                 <option
                   v-for="option in genderOptions"
                   v-bind:value="option.value"
@@ -66,9 +64,7 @@
             <div class="select is-fullwidth">
               <!-- populate paymentMethod dropdown menu -->
               <select v-model="selectedpayment">
-                <option value="">
-                  Any
-                </option>
+                <option value="">Any</option>
                 <option
                   v-for="option in paymentOptions"
                   v-bind:value="option.value"
@@ -335,65 +331,75 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-.page-link {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  border: 1px solid #ddd;
-
-  &:hover {
-    background-color: #ddd;
+.main-container {
+  .container {
+    min-height: calc(100vh - 120px);
   }
-}
+  .page-link {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #ddd;
 
-.pagination .active a {
-  background-color: #49a73d;
-  border: 1px solid #49a73d;
-  color: #fff;
-}
-
-.info {
-  font-size: 1rem;
-  font-weight: 600;
-
-  span {
-    font-size: 0.85rem;
-    color: gray;
-  }
-}
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: auto;
-  grid-gap: 1.5rem;
-
-  .card {
-    position: relative;
-
-    .card-header-title {
-      font-size: 1.15rem;
-      color: #3f2638;
+    &:hover {
+      background-color: #ddd;
     }
+  }
 
-    a {
-      color: #49a73d;
-      font-weight: 800;
+  .pagination .active a {
+    background-color: #49a73d;
+    border: 1px solid #49a73d;
+    color: #fff;
+  }
 
-      &:hover {
-        color: #2c2c2c;
+  .info {
+    font-size: 1rem;
+    font-weight: 600;
+
+    span {
+      font-size: 0.85rem;
+      color: #918e8e;
+    }
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: auto;
+    grid-gap: 1.5rem;
+
+    .card {
+      position: relative;
+
+      .card-header-title {
+        font-size: 1.15rem;
+        color: #3f2638;
+      }
+
+      a {
+        color: #49a73d;
+        font-weight: 800;
+
+        &:hover {
+          color: #2c2c2c;
+        }
       }
     }
   }
-}
 
-.filter-btn {
-  fill: #49a73d;
+  .filter-btn {
+    fill: #49a73d;
 
-  &:hover {
-    cursor: pointer;
-    fill: black;
+    &:hover {
+      cursor: pointer;
+      fill: black;
+    }
+  }
+
+  .footer {
+    background-color: #fafafa;
+    padding: 2rem 1.5rem 2rem;
   }
 }
 </style>
